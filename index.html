@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f7f8fc, #e2e6ea);
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        form input, form textarea, form button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        form button {
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #0056b3;
+        }
+
+        .resume-container h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .resume-container p, h3 {
+            margin: 10px 0;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        /* Style for the fields on the resume page */
+        .input-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .input-row input {
+            width: 48%;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Generator</h1>
+        <form id="resumeForm">
+            <div class="input-row">
+                <input type="text" id="fullName" placeholder="Full Name" required>
+                <input type="url" id="github" placeholder="GitHub Link" required>
+            </div>
+            <div class="input-row">
+                <input type="url" id="linkedin" placeholder="LinkedIn Link" required>
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+            </div>
+            <input type="text" id="address" placeholder="Address" required>
+            <textarea id="summary" placeholder="Summary" required></textarea>
+            <div id="educationDisplay">
+
+            <textarea id="education" placeholder="Education (School/College)" required></textarea>
+        </div>
+            <textarea id="projects" placeholder="Projects (List them)" required></textarea>
+            <textarea id="skills" placeholder="Technical Skills (List them)" required></textarea>
+            <textarea id="certifications" placeholder="Certifications (List them)" required></textarea>
+            <textarea id="internships" placeholder="Internships (List them)" required></textarea>
+            <textarea id="activities" placeholder="Extra Curriculum Activities (List them)" required></textarea>
+            <button type="button" id="generateResume">Generate Resume</button>
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
